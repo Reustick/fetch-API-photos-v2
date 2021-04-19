@@ -46,7 +46,6 @@ async function getPhotos() {
         if (windowRelativeBottom <= clHeight + 50 || a === 0) {
             let response = await fetch(`https://jsonplaceholder.typicode.com/photos?_start=${a}&_limit=${b}`);
             let content = await response.json();
-            console.log(content);
             a+=5;
             b+=5;
             if (content) {
